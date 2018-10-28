@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<venda moeda="real" xsi:noNamespaceSchemaLocation="formatoVenda.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<formaDePagamento>Débito</formaDePagamento>
+	<produtos>
+		<produto>
+			<nome>Livro de XML</nome>
+			<preco>29.90</preco>
+		</produto>
+		<produto>
+			<nome>Livro de Java</nome>
+			<preco>39.90</preco>
+		</produto>
+	</produtos>
+</venda>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+     version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+     <persistence-unit name="Escola" transaction-type="RESOURCE_LOCAL">
+       <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+       <class>fernando.estudos.devmedia.jpa.entity.Aluno</class>
+       <class>fernando.estudos.devmedia.jpa.entity.Disciplina</class>
+       <class>fernando.estudos.devmedia.jpa.entity.Professor</class>
+      <properties>
+		        <property name="javax.persistence.jdbc.driver" 
+                  value="com.mysql.jdbc.Driver" />
+		        <property name="javax.persistence.jdbc.url" 
+                  value="jdbc:mysql://192.168.0.10:3306/Escola" />
+		        <property name="javax.persistence.jdbc.user" value="fernando" />
+		       <property name="javax.persistence.jdbc.password" value="110ombro" />
+
+		        <!-- EclipseLink should create the database schema automatically -->
+		        <property name="eclipselink.ddl-generation" value="create-tables" />
+    		     <property name="eclipselink.ddl-generation.output-mode"
+		           value="database" />
+      </properties>
+  </persistence-unit>
+</persistence>
