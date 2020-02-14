@@ -1,2 +1,2 @@
-# Alura-Java-Courses
-Java projects developed at Alura courses
+# Java-Courses
+Java projects developed on several courses
