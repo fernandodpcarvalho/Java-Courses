@@ -1,11 +1,8 @@
-package com.testes.jvm.leaks;
+package com.testes.jvm.memory.leaks;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
 
 public class CustomerManager {
 

@@ -1,4 +1,4 @@
-package com.testes.jvm.leaks;
+package com.testes.jvm.memory.leaks;
 
 import java.util.UUID;
 

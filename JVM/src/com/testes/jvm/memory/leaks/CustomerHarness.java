@@ -1,4 +1,8 @@
-package com.testes.jvm.leaks;
+package com.testes.jvm.memory.leaks;
+
+//JVM Argments: -Xmx10m
+//Will cause a java.lang.OutOfMemoryError exception
+//Install and use visualvm
 
 public class CustomerHarness {
 	

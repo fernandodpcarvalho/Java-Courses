@@ -5,33 +5,28 @@ public class PassingParametersTests {
 	public static void main(String[] args) {
 		
 		//Teste de variáveis final
-		final Cidadao cidadao = new Cidadao("Fernando");
+		Cidadao cidadao = new Cidadao("Fernando");
 		System.out.println(cidadao);
+		
 //		cidadao = new Cidadao("Vitor");
 		cidadao.nome = "Vitor";
-		
 		System.out.println(cidadao);
+		System.gc();
+		
+		//object will be modified inside the called method  
 		alterar(cidadao);
 		System.out.println(cidadao);
-		gc();
+		
+		// A final variable can only be assigned once
+		final Cidadao c = new Cidadao("Final Test");
+		c.nome = "We can modify the object variables";
+//		c = new Cidadao("But we cannot modify the c variable assign");
 	}
 	
 	private static void alterar(Cidadao c) {
-		System.out.println("Alterando o cidadão: "+c);
+		System.out.println("Alterando o cidadão: "+c+" para: Thais");
 		c.nome = "Thais";
 	}
-	
-	static void gc() {
-		System.out.println("Garbage Collection Calling Start ");
-		try {
-			System.gc();
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		System.out.println("Garbage Collection Calling Finished ");
-	}
-
 }
 
 class Cidadao {
@@ -44,7 +39,7 @@ class Cidadao {
 	}
 	@Override
 	protected void finalize() {
-		System.out.println("Destroying object: "+this+"");
+		System.out.println("GC destroying object: "+this+"");
 	}
 	@Override
 	public String toString() {
