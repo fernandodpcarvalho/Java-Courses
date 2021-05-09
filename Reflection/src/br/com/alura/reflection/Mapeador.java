@@ -15,7 +15,7 @@ public class Mapeador {
 			Class<?> interf = Class.forName(key.toString());
 			Class<?> impl   = Class.forName(p.get(key).toString());
 			
-			if(!interf.isAssignableFrom(impl)) throw new RuntimeException("A classe "+impl.getName()+" não implementa "+interf.getName());
+			if(!interf.isAssignableFrom(impl)) throw new RuntimeException("A classe "+impl.getName()+" nï¿½o implementa "+interf.getName());
 			
 			mapa.put(interf, impl);
 		}
@@ -37,7 +37,7 @@ public class Mapeador {
 	}
 	
 
-	//Usando construtor com parâmetros.
+	//Usando construtor com parï¿½metros.
 	@SuppressWarnings("unchecked")
 	public <E> E getInstanciaE(Class<E> interf, Object... params) throws Exception {
 		Class<?> impl = mapa.get(interf);
