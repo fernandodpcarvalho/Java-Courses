@@ -44,3 +44,7 @@ target/
 
 # Git 
 /.metadata/
+
+# Intellij
+*.iml
+.idea
