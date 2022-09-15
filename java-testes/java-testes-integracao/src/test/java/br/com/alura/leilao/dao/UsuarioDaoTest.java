@@ -34,7 +34,7 @@ class UsuarioDaoTest {
 	}
 
 	@Test
-	void NaoDeveEncontrarUsuarioNaoCadastrado() {
+	void NaoDeveEncontrarUsuarioNaoCadastrado() {cute
 		Usuario usuario = criarUsuario();
 		Assert.assertThrows(NoResultException.class, () -> this.dao.buscarPorUsername("Beltrano"));
 	}
